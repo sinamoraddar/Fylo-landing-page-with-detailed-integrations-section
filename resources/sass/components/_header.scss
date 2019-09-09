@@ -1,148 +1,67 @@
 header {
+  background: url(/vendors/images/bg-intro-mobile.svg);
+  @extend %backgroundFitter;
+  background-size: auto !important;
+  background-position: right top !important;
+  height: 650px;
   position: relative;
   overflow: hidden;
-  height: 600px;
-  .header__background {
-    background: linear-gradient(160deg, $veryDarkBlue, $darkBlue, $softBlue);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100% !important;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    transform: skewY(7deg);
-    transform-origin: top right;
-    z-index: -1;
-  }
+  margin-bottom: $normalSpacing;
   nav {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    padding: $shortSpacing 0;
-    > a {
-      width: 50%;
-      max-width: 210px;
-    }
     .logo {
+      display: inline-block;
+      width: 5.2rem;
       img {
-        width: 50%;
+        width: 100%;
         height: auto;
       }
     }
-    .header__links {
+    span {
       display: flex;
       flex-direction: row;
-      align-items: center;
-      justify-content: flex-end;
-      width: 50%;
-      a {
-        display: inline-block;
-        width: 90% !important;
-        max-width: 90px !important;
-        margin-left: $veryShortSpacing;
-      }
-    }
-    @media screen and (min-width: $tabletBreakPoint) {
-      padding-top: $shortSpacing + 10;
-      > a {
-        width: 23% !important;
-      }
-      .header__links {
-        justify-content: flex-end;
-        width: 20% !important;
-        min-width: 200px;
-        .link {
-          display: inline-block;
-          width: 35% !important;
-          padding: 0.6em !important;
-        }
+      justify-content: space-around;
+      width: 43%;
+      .greenButton {
+        padding-left: $littleShortSpacing;
+        padding-right: $littleShortSpacing;
+        margin-left: 0.5rem;
       }
     }
   }
+
   section {
+    position: relative;
+    top: 60px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 500px;
-    margin: ($normalSpacing + -40) 0;
-    * {
-      margin: $littleShortSpacing;
+    text-align: center;
+    h1 {
+      font-size: 1.8rem;
     }
     .header__image {
-      background: url("/"+$fylo+"/vendors/images/illustration-hero.svg");
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      width: 100% !important;
-      height: 34%;
+      background-image: url(/vendors/images/illustration-main.svg);
+      width: 100%;
+      height: 100% !important;
+      @extend %backgroundFitter;
     }
-    .link {
-      font-weight: $semiBoldBodyFontWeight;
-      width: 50%;
-      padding: $littleShortSpacing $shortSpacing !important;
-    }
-    div:nth-of-type(2) {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    @media screen and (min-width: $mobileBreakPoint) {
-      flex-direction: row-reverse;
-      justify-content: space-between;
-      margin: ($normalSpacing + -35) 0;
-      height: 300px;
-      > div {
-        width: 50% !important;
-        height: 100%;
-      }
-      .header__image {
-        height: 100%;
-        width: 50% !important;
-      }
-      .link {
-        font-size: 95% !important;
-        width: 35%;
-        min-width: 125px;
-      }
-
-      div:nth-of-type(2) {
-        justify-content: center;
-        align-items: flex-start;
-        h1 {
-          text-align: start;
-          font-size: 1.6em;
-          line-height: 1.3;
-          margin-bottom: $lightSpacing + 10;
-        }
-        br {
-          display: none;
-        }
-        @media screen and (min-width: 1208px) {
-          h1 {
-            font-size: 2.3em;
-          }
-        }
-      }
+    .greenButton {
+      -webkit-box-shadow: 10px 10px 12px 3px rgba(0, 0, 0, 0.14);
+      -moz-box-shadow: 10px 10px 12px 3px rgba(0, 0, 0, 0.14);
+      box-shadow: 10px 10px 12px 3px rgba(0, 0, 0, 0.14);
+      margin: $littleShortSpacing 0;
     }
   }
-
-  @media screen and (min-width: $mobileBreakPoint) {
-    height: 500px;
-  }
-  @media screen and (min-width: $tabletBreakPoint) {
-    height: 550px;
-  }
-  @media screen and (min-width: 1208px) {
-    .header {
-        section {
-          h1 {
-          width: 90%;
-          }
-        }
-    }
-    height: 625px;
-  }
+}
+.header__curvedBottom {
+  position: relative;
+  bottom: 0;
+  @extend %backgroundFitter;
+  background: url(/vendors/images/curvedBackGround.svg);
+  background-position: bottom !important;
+  width: 100%;
+  height: 100px;
 }
