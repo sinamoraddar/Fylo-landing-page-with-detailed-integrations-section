@@ -73,10 +73,9 @@ header {
   background: url(/vendors/images/bg-intro-mobile.svg);
   background-size: auto !important;
   background-position: right top !important;
-  height: 650px;
+  height: 700px;
   position: relative;
   overflow: hidden;
-  margin-bottom: 2.5rem;
 }
 header nav {
   display: flex;
@@ -104,7 +103,7 @@ header nav span .greenButton {
 header section {
   position: relative;
   top: 60px;
-  height: 500px;
+  height: 550px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -114,7 +113,7 @@ header section h1 {
   font-size: 1.8rem;
 }
 header section .header__image {
-  background-image: url(/vendors/images/illustration-main.svg);
+  background-image: url("/vendors/images/illustration-main.svg");
   width: 100%;
   height: 100% !important;
 }
@@ -129,9 +128,30 @@ header section .greenButton {
   position: relative;
   bottom: 0;
   background: url(/vendors/images/curvedBackGround.svg);
-  background-position: bottom !important;
+  background-size: 100% 100% !important;
   width: 100%;
-  height: 100px;
+}
+.header__curvedBottom img {
+  visibility: hidden;
+  width: 100%;
+}
+
+@media screen and (min-width: 375px) {
+  header nav .logo {
+    width: 6rem;
+  }
+  header nav span {
+    justify-content: flex-end;
+  }
+  header section h1 {
+    max-width: 600px;
+  }
+  header section p {
+    max-width: 450px;
+  }
+  header section .greenButton {
+    padding: 1em 4.5em !important;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
