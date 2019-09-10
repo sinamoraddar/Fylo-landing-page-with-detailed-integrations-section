@@ -3,7 +3,7 @@ header {
   @extend %backgroundFitter;
   background-size: auto !important;
   background-position: right top !important;
-  height: 700px;
+  height: 750px;
   position: relative;
   overflow: hidden;
   // margin-bottom: $normalSpacing;
@@ -33,8 +33,8 @@ header {
 
   section {
     position: relative;
-    top: 60px;
-    height: 550px;
+    top: 30px;
+    height: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,17 +42,35 @@ header {
     h1 {
       font-size: 1.8rem;
     }
-    .header__image {
-      background-image: url("/vendors/images/illustration-main.svg");
-      width: 100%;
-      height: 100% !important;
-      @extend %backgroundFitter;
+    span {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      // br {
+      //   display: none !important;
+      // }
+      .greenButton {
+        -webkit-box-shadow: 10px 10px 12px 3px rgba(0, 0, 0, 0.14);
+        -moz-box-shadow: 10px 10px 12px 3px rgba(0, 0, 0, 0.14);
+        box-shadow: 10px 10px 12px 3px rgba(0, 0, 0, 0.14);
+        margin: $littleShortSpacing 0;
+      }
     }
-    .greenButton {
-      -webkit-box-shadow: 10px 10px 12px 3px rgba(0, 0, 0, 0.14);
-      -moz-box-shadow: 10px 10px 12px 3px rgba(0, 0, 0, 0.14);
-      box-shadow: 10px 10px 12px 3px rgba(0, 0, 0, 0.14);
-      margin: $littleShortSpacing 0;
+    .header__image {
+      @extend %backgroundFitter;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        visibility: hidden;
+        width: 100%;
+        // height: 40% !important;
+      }
+      background-image: url("/vendors/images/illustration-main.svg");
+      background-size: 100% auto !important;
+      width: 65%;
+      max-width: 300px;
+      // height: 0 !important;
     }
   }
 }
@@ -63,21 +81,14 @@ header {
     visibility: hidden;
     width: 100%;
   }
-
+  img:nth-of-type(2) {
+    display: none;
+  }
   @extend %backgroundFitter;
-  background: url(/vendors/images/curvedBackGround.svg);
+  background: url(/vendors/images/headerBottomBackground-mobile.svg);
   background-size: 100% 100% !important;
-  // background-position: bottom !important;
+  background-position: bottom !important;
   width: 100%;
-  // height: 80px;
-  // height: 0;
-  // padding-top: 66.64%;
-  // @media screen and (min-width: 414px) {
-  //   height: 85px;
-  // }
-  // @media screen and (min-width: 414px) {
-  //   height: 88px;
-  // }
 }
 @media screen and (min-width: $mobileBreakPoint) {
   header {
@@ -90,15 +101,60 @@ header {
       }
     }
     section {
-      h1 {
-        max-width: 600px;
-      }
-      p {
-        max-width: 450px;
-      }
-      .greenButton {
-        padding: 1em 4.5em !important;
+      span {
+        h1 {
+          max-width: 700px;
+        }
+        p {
+          max-width: 450px;
+        }
+        .greenButton {
+          padding: 1em 4.5em !important;
+        }
       }
     }
+  }
+}
+@media screen and (min-width: $tabletBreakPoint) {
+  header {
+    background: url(/vendors/images/bg-intro-desktop.svg);
+    background-size: 55% 100% !important;
+    nav {
+      span {
+        .greenButton {
+          margin-left: 1.5rem;
+        }
+      }
+    }
+    section {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      top: 0;
+      & > * {
+        width: 50% !important;
+        height: 100%;
+      }
+      span {
+        align-items: flex-start;
+        justify-content: center;
+        padding-right: 4rem;
+        * {
+          text-align: start;
+        }
+      }
+      .header__image {
+        max-width: 450px;
+        margin-left: 5rem;
+      }
+    }
+  }
+  .header__curvedBottom {
+    img:first-child {
+      display: none !important;
+    }
+    img:nth-of-type(2) {
+      display: initial;
+    }
+    background: url(/vendors/images/headerBottomBackground-desktop.svg);
   }
 }
