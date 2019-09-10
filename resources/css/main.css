@@ -144,7 +144,8 @@ header section .header__image img {
 
 .header__curvedBottom {
   position: relative;
-  bottom: 0;
+  bottom: -5px;
+  z-index: -1;
   background: url(/vendors/images/headerBottomBackground-mobile.svg);
   background-size: 100% 100% !important;
   background-position: bottom !important;
@@ -208,8 +209,6 @@ header section .header__image img {
   .header__curvedBottom {
     background: url(/vendors/images/headerBottomBackground-desktop.svg);
     position: relative;
-    bottom: -5px;
-    z-index: -1;
   }
   .header__curvedBottom img:first-child {
     display: none !important;
@@ -241,13 +240,14 @@ main section span h2 {
   color: #070439;
   line-height: 1.5;
 }
-main section span figure {
-  margin: 2.6rem 0;
+main span:nth-of-type(2) {
+  display: grid;
+  row-gap: 2.6rem;
 }
-main section span figure:nth-of-type(1) {
-  margin-top: 0 !important;
-}
-main section span figure figcaption {
+main span:nth-of-type(2) figure figcaption {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   font-size: 1.1rem;
   font-weight: 600;
   margin: 2rem 0;
@@ -271,9 +271,50 @@ main .introduction__features__background img:nth-of-type(2) {
   display: none;
 }
 
+@media screen and (min-width: 375px) {
+  main p {
+    max-width: 490px;
+  }
+  main .introduction__features span:nth-of-type(2) {
+    grid-template-columns: auto auto;
+    column-gap: 1rem;
+  }
+  main .introduction__features span:nth-of-type(2) * {
+    margin: 0;
+  }
+  main .introduction__features span:nth-of-type(2) figure {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  main .introduction__features span:nth-of-type(2) figure img {
+    height: 100px !important;
+    width: auto !important;
+  }
+  main .introduction__features span:nth-of-type(2) figure figcaption {
+    margin-top: 2rem;
+    height: 50px;
+  }
+}
 @media screen and (min-width: 768px) {
+  main h2 {
+    font-size: 1.8rem;
+    margin: 1rem 0;
+  }
+  main h2 br {
+    display: none;
+  }
+  main p {
+    font-size: 1.05rem !important;
+  }
+  main .introduction__features span:nth-of-type(2) {
+    grid-template-columns: auto auto auto;
+    column-gap: 1.5rem;
+  }
   main .introduction__features__background {
-    background: url(/vendors//images//headerBottomBackground-desktop.svg);
+    background: url(/vendors/images/headerBottomBackground-desktop.svg);
   }
   main .introduction__features__background img:nth-of-type(1) {
     display: none;
