@@ -179,7 +179,7 @@ header section .header__image img {
 @media screen and (min-width: 768px) {
   header {
     background: url(/vendors/images/bg-intro-desktop.svg);
-    background-size: 55% 100% !important;
+    background-size: 55% 90% !important;
   }
   header nav span .greenButton {
     margin-left: 1.5rem;
@@ -202,6 +202,7 @@ header section .header__image img {
     text-align: start;
   }
   header section .header__image {
+    min-width: 310px;
     max-width: 450px;
     margin-left: 5rem;
   }
@@ -216,6 +217,9 @@ header section .header__image img {
   .header__curvedBottom img:nth-of-type(2) {
     display: initial;
   }
+}
+main {
+  margin-bottom: 3.5rem;
 }
 main section {
   display: flex;
@@ -237,6 +241,7 @@ main section p {
   font-size: 0.95rem;
 }
 main section h2 {
+  font-size: 1.4rem;
   color: #070439;
   line-height: 1.5;
 }
@@ -277,7 +282,7 @@ main .introduction__apps {
 }
 main .introduction__apps span:nth-of-type(2) {
   display: grid;
-  grid-template-columns: 220px;
+  grid-template-columns: 210px;
   justify-content: center;
   margin: 0 auto;
   width: 100%;
@@ -347,7 +352,7 @@ main .introduction__apps span:nth-of-type(2) figure figcaption h3 {
 }
 @media screen and (min-width: 585px) {
   main .introduction__apps span:nth-of-type(2) {
-    grid-template-columns: 220px 220px;
+    grid-template-columns: 210px 210px;
     column-gap: 2rem;
   }
 }
@@ -356,7 +361,7 @@ main .introduction__apps span:nth-of-type(2) figure figcaption h3 {
     grid-template-columns: auto auto auto;
   }
   main .introduction__apps span:nth-of-type(2) figure {
-    max-width: 220px;
+    max-width: 210px;
   }
 }
 @media screen and (min-width: 1300px) {
@@ -379,8 +384,7 @@ main .introduction__apps span:nth-of-type(2) figure:nth-of-type(5) {
 }
 @media screen and (min-width: 1300px) {
   main .introduction__apps {
-    position: relative;
-    top: -5rem;
+    margin-top: -5rem;
     grid-template-columns: 30% 70% !important;
     column-gap: 1.3rem;
   }
@@ -389,6 +393,18 @@ main .introduction__apps span:nth-of-type(2) figure:nth-of-type(5) {
   }
   main .introduction__apps span:first-of-type br {
     display: none;
+  }
+}
+main .introduction__signUp p {
+  margin-bottom: 2.5rem;
+  width: 85%;
+}
+main .introduction__signUp .bigButton {
+  padding: 1rem 4.5rem;
+}
+@media screen and (min-width: 1300px) {
+  main .introduction__signUp p {
+    max-width: 650px;
   }
 }
 
@@ -420,11 +436,11 @@ main .introduction__apps span:nth-of-type(2) figure:nth-of-type(5) {
     font-size: 1.05rem !important;
   }
 
-  main h2 {
+  main section h2 {
     font-size: 1.8rem;
     margin: 1rem 0;
   }
-  main h2 br {
+  main section h2 br {
     display: none;
   }
   main .introduction__features span:nth-of-type(2) {

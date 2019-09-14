@@ -119,7 +119,7 @@ header {
 @media screen and (min-width: $tabletBreakPoint) {
   header {
     background: url(/vendors/images/bg-intro-desktop.svg);
-    background-size: 55% 100% !important;
+    background-size: 55% 90% !important;
     nav {
       span {
         .greenButton {
@@ -144,6 +144,7 @@ header {
         }
       }
       .header__image {
+        min-width: 310px;
         max-width: 450px;
         margin-left: 5rem;
       }
