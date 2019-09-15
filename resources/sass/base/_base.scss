@@ -63,6 +63,12 @@ a {
 .greenButton {
   background: $green !important;
   border-radius: $lightBorderRadius !important;
+  transition: 0.1s ease-in;
+  @media screen and (min-width: $tabletBreakPoint) {
+    &:hover {
+      background: darken($green, 10%) !important;
+    }
+  }
 }
 .bigButton {
   font-weight: $semiBoldBodyFontWeight;
