@@ -54,7 +54,7 @@ main {
     img:nth-of-type(2) {
       display: none;
     }
-    background: url("/vendors"+$fylo+"/images/headerBottomBackground-mobile.svg");
+    background: url($fylo+"/vendors/images/headerBottomBackground-mobile.svg");
     background-size: 100% 100% !important;
     transform: rotate(180deg);
   }
@@ -73,12 +73,15 @@ main {
         width: 100%;
         height: 100%;
         background: white;
-        @include backgroundUrl(1, "/vendors/images/logo-slack.png");
-        @include backgroundUrl(2, "/vendors/images/logo-gsuite.png");
-        @include backgroundUrl(3, "/vendors/images/logo-trello.png");
-        @include backgroundUrl(4, "/vendors/images/logo-asana.png");
-        @include backgroundUrl(5, "/vendors/images/logo-salesforce.png");
-        @include backgroundUrl(6, "/vendors/images/logo-typeform.png");
+        @include backgroundUrl(1, $fylo + "/vendors/images/logo-slack.png");
+        @include backgroundUrl(2, $fylo + "/vendors/images/logo-gsuite.png");
+        @include backgroundUrl(3, $fylo + "/vendors/images/logo-trello.png");
+        @include backgroundUrl(4, $fylo + "/vendors/images/logo-asana.png");
+        @include backgroundUrl(
+          5,
+          $fylo + "/vendors/images/logo-salesforce.png"
+        );
+        @include backgroundUrl(6, $fylo + "/vendors/images/logo-typeform.png");
         &:nth-of-type(4),
         &:nth-of-type(5) {
           div {
@@ -243,7 +246,7 @@ main {
       }
     }
     .introduction__features__background {
-      background: url("/vendors"+$fylo+"/images/headerBottomBackground-desktop.svg");
+      background: url($fylo+"/vendors/images/headerBottomBackground-desktop.svg");
       img:nth-of-type(1) {
         display: none;
       }
