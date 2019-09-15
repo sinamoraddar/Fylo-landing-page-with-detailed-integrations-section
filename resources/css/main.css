@@ -1,6 +1,8 @@
 @import "../../vendors/css/normalize.css";
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Raleway:700&display=swap");
-.header__curvedBottom, header section .header__image, header {
+.header__curvedBottom,
+header section .header__image,
+header {
   background-size: contain !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
@@ -40,15 +42,25 @@ h6 {
 
 a {
   font-size: 0.77rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   text-decoration: none;
   color: white;
   padding: 0.1rem 0;
 }
-a:hover, a:active {
+a:hover,
+a:active {
   text-decoration: underline !important;
 }
 
@@ -60,6 +72,7 @@ a:hover, a:active {
 .greenButton {
   background: #05d69b !important;
   border-radius: 2.5px !important;
+  -webkit-transition: 0.1s ease-in;
   transition: 0.1s ease-in;
 }
 @media screen and (min-width: 768px) {
@@ -89,7 +102,11 @@ header {
   overflow: hidden;
 }
 header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 header nav .logo {
@@ -101,8 +118,14 @@ header nav .logo img {
   height: auto;
 }
 header nav span {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   width: 43%;
 }
@@ -115,8 +138,15 @@ header section {
   position: relative;
   top: 30px;
   height: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   text-align: center;
 }
@@ -124,19 +154,31 @@ header section h1 {
   font-size: 1.8rem;
 }
 header section span {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 header section span .greenButton {
   -webkit-box-shadow: 10px 10px 12px 3px rgba(0, 0, 0, 0.14);
-  -moz-box-shadow: 10px 10px 12px 3px rgba(0, 0, 0, 0.14);
   box-shadow: 10px 10px 12px 3px rgba(0, 0, 0, 0.14);
   margin: 1.3rem 0;
 }
 header section .header__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-image: url("/Fylo-landing-page-with-detailed-integrations-section/vendors/images/illustration-main.svg");
   background-size: 100% auto !important;
@@ -170,6 +212,8 @@ header section .header__image img {
     width: 6rem;
   }
   header nav span {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
   }
   header section span h1 {
@@ -191,7 +235,12 @@ header section .header__image img {
     margin-left: 1.5rem;
   }
   header section {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
     flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     top: 0;
   }
@@ -200,7 +249,11 @@ header section .header__image img {
     height: 100%;
   }
   header section span {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     padding-right: 4rem;
   }
@@ -228,16 +281,30 @@ main {
   margin-bottom: 3.5rem;
 }
 main section {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 main section * {
   text-align: center;
 }
 main section span {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding-top: 2.5rem !important;
   padding-bottom: 2.5rem !important;
@@ -256,8 +323,14 @@ main span:nth-of-type(2) {
   row-gap: 2.6rem;
 }
 main span:nth-of-type(2) figure figcaption {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
   font-size: 1.1rem;
   font-weight: 600;
@@ -272,6 +345,7 @@ main .introduction__features__background {
   z-index: -1;
   background: url("/Fylo-landing-page-with-detailed-integrations-section/vendors/images/headerBottomBackground-mobile.svg");
   background-size: 100% 100% !important;
+  -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 main .introduction__features__background img {
@@ -289,6 +363,8 @@ main .introduction__apps {
 main .introduction__apps span:nth-of-type(2) {
   display: grid;
   grid-template-columns: 210px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin: 0 auto;
   width: 100%;
@@ -317,7 +393,8 @@ main .introduction__apps span:nth-of-type(2) figure:nth-of-type(5) div {
 main .introduction__apps span:nth-of-type(2) figure:nth-of-type(6) div {
   background: url("/Fylo-landing-page-with-detailed-integrations-section/vendors/images/logo-typeform.png");
 }
-main .introduction__apps span:nth-of-type(2) figure:nth-of-type(4) div, main .introduction__apps span:nth-of-type(2) figure:nth-of-type(5) div {
+main .introduction__apps span:nth-of-type(2) figure:nth-of-type(4) div,
+main .introduction__apps span:nth-of-type(2) figure:nth-of-type(5) div {
   background-size: 47% auto !important;
 }
 main .introduction__apps span:nth-of-type(2) figure div {
@@ -336,13 +413,21 @@ main .introduction__apps span:nth-of-type(2) figure div img {
 }
 main .introduction__apps span:nth-of-type(2) figure > * {
   -webkit-box-shadow: 0px 0px 5px -3px rgba(0, 0, 0, 0.6);
-  -moz-box-shadow: 0px 0px 5px -3px rgba(0, 0, 0, 0.6);
   box-shadow: 0px 0px 5px -3px rgba(0, 0, 0, 0.6);
 }
 main .introduction__apps span:nth-of-type(2) figure figcaption {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
   border-radius: 0 0 2.5px 2.5px;
   margin: 0;
@@ -359,6 +444,7 @@ main .introduction__apps span:nth-of-type(2) figure figcaption h3 {
 @media screen and (min-width: 585px) {
   main .introduction__apps span:nth-of-type(2) {
     grid-template-columns: 210px 210px;
+    -webkit-column-gap: 2rem;
     column-gap: 2rem;
   }
 }
@@ -372,15 +458,18 @@ main .introduction__apps span:nth-of-type(2) figure figcaption h3 {
 }
 @media screen and (min-width: 1300px) {
   main .introduction__apps span:nth-of-type(2) {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
+    -webkit-column-gap: 1rem;
     column-gap: 1rem;
     row-gap: 0;
   }
-  main .introduction__apps span:nth-of-type(2) figure:nth-child(-n+3) {
+  main .introduction__apps span:nth-of-type(2) figure:nth-child(-n + 3) {
     margin-bottom: 1.5rem;
   }
   main .introduction__apps span:nth-of-type(2) figure:nth-of-type(2),
-main .introduction__apps span:nth-of-type(2) figure:nth-of-type(5) {
+  main .introduction__apps span:nth-of-type(2) figure:nth-of-type(5) {
     position: relative;
     top: -3rem;
   }
@@ -392,6 +481,7 @@ main .introduction__apps span:nth-of-type(2) figure:nth-of-type(5) {
   main .introduction__apps {
     margin-top: -5rem;
     grid-template-columns: 30% 70% !important;
+    -webkit-column-gap: 1.3rem;
     column-gap: 1.3rem;
   }
   main .introduction__apps span:first-of-type * {
@@ -423,9 +513,18 @@ main .introduction__signUp .bigButton {
   }
   main .introduction__features span:nth-of-type(2) figure {
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
   main .introduction__features span:nth-of-type(2) figure img {
@@ -451,6 +550,7 @@ main .introduction__signUp .bigButton {
   }
   main .introduction__features span:nth-of-type(2) {
     grid-template-columns: auto auto auto;
+    -webkit-column-gap: 1.5rem;
     column-gap: 1.5rem;
   }
   main .introduction__features__background {
@@ -479,8 +579,15 @@ footer * {
   color: #fafafa;
 }
 footer nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
 }
 footer nav ul {
@@ -495,12 +602,21 @@ footer nav li {
   list-style-type: none;
 }
 footer nav li a {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
 }
 @media screen and (min-width: 530px) {
   footer nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
 }
@@ -512,6 +628,8 @@ footer .contactUs > * {
   margin: 1.3rem 0;
 }
 footer .contactUs .logo {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
 }
 @media screen and (min-width: 768px) {
@@ -520,8 +638,15 @@ footer .contactUs .logo {
   }
 }
 footer .contactUs form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
   align-items: flex-end;
 }
 footer .contactUs form * {
@@ -538,15 +663,26 @@ footer .contactUs form input {
 }
 footer .contactUs form button {
   width: 40% !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   font-size: 0.8rem;
   margin-right: 7px;
 }
 @media screen and (min-width: 530px) {
   footer .contactUs form {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     height: 45px;
   }
@@ -563,7 +699,12 @@ footer .contactUs form button {
 }
 @media screen and (min-width: 768px) {
   footer .contactUs form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     height: 150px;
     margin: 0;
@@ -580,7 +721,12 @@ footer .contactUs form button {
 }
 @media screen and (min-width: 1060px) {
   footer .contactUs form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     height: 45px;
     margin: 1.3rem 0;
@@ -597,7 +743,11 @@ footer .contactUs form button {
   }
 }
 footer .contactUs span a {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   height: 2.5rem;
 }
@@ -611,11 +761,10 @@ footer .contactUs span p {
 @media screen and (min-width: 768px) {
   footer {
     grid-template-columns: 35% 50%;
+    -webkit-column-gap: 15%;
     column-gap: 15%;
   }
   footer p {
     font-size: 0.9rem !important;
   }
 }
-
-/*# sourceMappingURL=main.css.map */
