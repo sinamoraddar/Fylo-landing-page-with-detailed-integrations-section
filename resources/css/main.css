@@ -75,7 +75,7 @@ p {
 }
 
 header {
-  background: url(/vendors/images/bg-intro-mobile.svg);
+  background: url("/vendors/Fylo-landing-page-with-detailed-integrations-section/images/bg-intro-mobile.svg");
   background-size: auto !important;
   background-position: right top !important;
   height: 750px;
@@ -132,7 +132,7 @@ header section .header__image {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("/vendors/images/illustration-main.svg");
+  background-image: url("/vendors/Fylo-landing-page-with-detailed-integrations-section/images/illustration-main.svg");
   background-size: 100% auto !important;
   width: 65%;
   max-width: 300px;
@@ -146,7 +146,7 @@ header section .header__image img {
   position: relative;
   bottom: -5px;
   z-index: -1;
-  background: url(/vendors/images/headerBottomBackground-mobile.svg);
+  background: url("/vendors/Fylo-landing-page-with-detailed-integrations-section/images/headerBottomBackground-mobile.svg");
   background-size: 100% 100% !important;
   background-position: bottom !important;
   width: 100%;
@@ -178,7 +178,7 @@ header section .header__image img {
 }
 @media screen and (min-width: 768px) {
   header {
-    background: url(/vendors/images/bg-intro-desktop.svg);
+    background: url("/vendors//Fylo-landing-page-with-detailed-integrations-sectionimages/bg-intro-desktop.svg");
     background-size: 55% 90% !important;
   }
   header nav span .greenButton {
@@ -208,7 +208,7 @@ header section .header__image img {
   }
 
   .header__curvedBottom {
-    background: url(/vendors/images/headerBottomBackground-desktop.svg);
+    background: url("/vendors/Fylo-landing-page-with-detailed-integrations-section/images/headerBottomBackground-desktop.svg");
     position: relative;
   }
   .header__curvedBottom img:first-child {
@@ -264,7 +264,7 @@ main .introduction__features__background {
   position: relative;
   top: -3px;
   z-index: -1;
-  background: url(/vendors/images/headerBottomBackground-mobile.svg);
+  background: url("/vendors/Fylo-landing-page-with-detailed-integrations-section/images/headerBottomBackground-mobile.svg");
   background-size: 100% 100% !important;
   transform: rotate(180deg);
 }
@@ -448,7 +448,7 @@ main .introduction__signUp .bigButton {
     column-gap: 1.5rem;
   }
   main .introduction__features__background {
-    background: url(/vendors/images/headerBottomBackground-desktop.svg);
+    background: url("/vendors/Fylo-landing-page-with-detailed-integrations-section/images/headerBottomBackground-desktop.svg");
   }
   main .introduction__features__background img:nth-of-type(1) {
     display: none;
@@ -479,6 +479,7 @@ footer nav {
 }
 footer nav ul {
   padding: 0;
+  height: 185px;
 }
 footer nav ul > * {
   margin: 1rem 0;
@@ -490,6 +491,13 @@ footer nav li {
 footer nav li a {
   justify-content: flex-start;
 }
+@media screen and (min-width: 530px) {
+  footer nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 footer.container {
   padding-top: 4.5rem;
   padding-bottom: 4.5rem;
@@ -499,6 +507,11 @@ footer .contactUs > * {
 }
 footer .contactUs .logo {
   justify-content: flex-start;
+}
+@media screen and (min-width: 768px) {
+  footer .contactUs .logo img {
+    height: 45px;
+  }
 }
 footer .contactUs form {
   display: flex;
@@ -512,6 +525,7 @@ footer .contactUs form * {
   border-radius: 2.5px;
 }
 footer .contactUs form input {
+  color: #2b2b2b;
   height: 2.3rem;
   padding: 0 1rem;
   width: 100%;
@@ -522,6 +536,59 @@ footer .contactUs form button {
   justify-content: center;
   font-size: 0.8rem;
   margin-right: 7px;
+}
+@media screen and (min-width: 530px) {
+  footer .contactUs form {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 45px;
+  }
+  footer .contactUs form input {
+    width: 65% !important;
+    margin-right: 0.5rem;
+    height: 100%;
+  }
+  footer .contactUs form button {
+    margin-right: 0;
+    width: 30% !important;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  footer .contactUs form {
+    flex-direction: column;
+    justify-content: center;
+    height: 150px;
+    margin: 0;
+  }
+  footer .contactUs form input {
+    width: 100% !important;
+    height: 40px;
+    margin-right: 0;
+  }
+  footer .contactUs form button {
+    width: 100% !important;
+    height: 40px;
+  }
+}
+@media screen and (min-width: 1060px) {
+  footer .contactUs form {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 45px;
+    margin: 1.3rem 0;
+  }
+  footer .contactUs form input {
+    width: 67% !important;
+    margin-right: 0.5rem !important;
+    height: 100% !important;
+  }
+  footer .contactUs form button {
+    margin-right: 0 !important;
+    width: 30% !important;
+    height: 100% !important;
+  }
 }
 footer .contactUs span a {
   justify-content: flex-start;
@@ -534,6 +601,15 @@ footer .contactUs span a img {
 }
 footer .contactUs span p {
   margin-left: 1.3rem;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    grid-template-columns: 35% 50%;
+    column-gap: 15%;
+  }
+  footer p {
+    font-size: 0.9rem !important;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
