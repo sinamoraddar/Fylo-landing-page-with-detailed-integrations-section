@@ -461,5 +461,79 @@ main .introduction__signUp .bigButton {
     padding-left: 5rem;
   }
 }
+footer {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  row-gap: 3.5rem;
+  background: #070439;
+  min-height: 200px;
+}
+footer * {
+  color: #fafafa;
+}
+footer nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+footer nav ul {
+  padding: 0;
+}
+footer nav ul > * {
+  margin: 1rem 0;
+  text-transform: capitalize;
+}
+footer nav li {
+  list-style-type: none;
+}
+footer nav li a {
+  justify-content: flex-start;
+}
+footer.container {
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+footer .contactUs > * {
+  margin: 1.3rem 0;
+}
+footer .contactUs .logo {
+  justify-content: flex-start;
+}
+footer .contactUs form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+footer .contactUs form * {
+  margin: 0.7rem 0;
+  outline: none;
+  border: none;
+  border-radius: 2.5px;
+}
+footer .contactUs form input {
+  height: 2.3rem;
+  padding: 0 1rem;
+  width: 100%;
+}
+footer .contactUs form button {
+  width: 40% !important;
+  display: flex;
+  justify-content: center;
+  font-size: 0.8rem;
+  margin-right: 7px;
+}
+footer .contactUs span a {
+  justify-content: flex-start;
+  align-items: center;
+  height: 2.5rem;
+}
+footer .contactUs span a img {
+  width: 20px;
+  height: auto;
+}
+footer .contactUs span p {
+  margin-left: 1.3rem;
+}
 
 /*# sourceMappingURL=main.css.map */
